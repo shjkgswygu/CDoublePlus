@@ -1,4 +1,5 @@
-exercise 1 C++
+######Exercise1
+參考上課內容
 ***
 #include <iostream>
 using namespace std;
@@ -7,24 +8,29 @@ int main()
 {
   const int NUMBER_OF_ELEMENTS = 5;
   double numbers[NUMBER_OF_ELEMENTS];
+  double numbers_square[NUMBER_OF_ELEMENTS];
   double sum = 0;
 
   for (int i = 0; i < NUMBER_OF_ELEMENTS; i++)
   {
-    cout << "Enter a new number: ";
+    cout << "輸入一個數: ";
     cin >> numbers[i];
     sum += numbers[i];
+    numbers_square[i]=numbers[i]*numbers[i];
   }
-
+  cout<<"第一個的數= "<< numbers[0] << endl;
+  cout<<"第一個數的平方= "<< numbers_square[0] << endl;
+  
   double average = sum / NUMBER_OF_ELEMENTS;
 
-  int count = 0; // The number of elements above average
+ /* int count = 0; // The number of elements above average
   for (int i = 0; i < NUMBER_OF_ELEMENTS; i++)
     if (numbers[i] > average)
-      count++;
+      count++;*/ 
 
-  cout << "Average is " << average << endl;
-  cout << "Number of elements above the average " << count << endl;
+  cout << "平均= " << average << endl;
+  cout << "你們曾龍老大給我們學子小采的作業 " << endl; 
+  //cout << "超過平均值的有 " << count << endl; 
   system("pause"); 
   return 0;
 }
